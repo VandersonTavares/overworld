@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-black text-white font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-brand-yellow text-brand-black font-bold rounded-none
+           hover:bg-white transition-colors duration-200 uppercase tracking-wider
+           focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent text-white font-bold rounded-none
+           hover:bg-brand-light-gray transition-colors duration-200 
+           border-2 border-white uppercase tracking-wider;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-brand-gray border-2 border-brand-light-gray
+           text-white placeholder-gray-400 rounded-none
+           focus:outline-none focus:border-brand-yellow;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-extrabold uppercase tracking-wider mb-6;
+  }
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white opacity-50 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-brand-yellow opacity-100 !important;
+}
